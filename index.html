@@ -278,6 +278,52 @@
   </div>
 
   <!-- ================================================================
+       SECTION 3 — CONTACT & BOOKING
+       ================================================================ -->
+  <section class="contact-booking" id="contact">
+    <div class="container">
+      <div class="showcase__header">
+        <p class="showcase__label">Get in Touch</p>
+        <h2 class="showcase__title">Book Your Experience</h2>
+        <p class="showcase__subtitle">Ready for a transformation? Reach out today.</p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; margin-top: 40px;">
+        <!-- Contact Info -->
+        <div id="book">
+          <h3 style="margin-bottom: 20px;">Contact Information</h3>
+          <p style="margin-bottom: 10px; color: var(--color-text-light);">123 Salon St, Style City, SC 12345</p>
+          <p style="margin-bottom: 10px; color: var(--color-text-light);">Phone: (555) 123-4567</p>
+          <p style="margin-bottom: 10px; color: var(--color-text-light);">Email: hello@slamsalon.com</p>
+          <div style="margin-top: 20px;">
+            <p style="font-weight: var(--fw-medium); margin-bottom: 5px;">Hours:</p>
+            <p style="font-size: 14px; color: var(--color-text-light);">Mon - Fri: 9:00 AM - 7:00 PM</p>
+            <p style="font-size: 14px; color: var(--color-text-light);">Sat: 10:00 AM - 6:00 PM</p>
+            <p style="font-size: 14px; color: var(--color-text-light);">Sun: Closed</p>
+          </div>
+        </div>
+
+        <!-- Booking Form (Simplified) -->
+        <div>
+          <h3 style="margin-bottom: 20px;">Quick Appointment</h3>
+          <form style="display: flex; flex-direction: column; gap: 15px;">
+            <input type="text" placeholder="Your Name" style="padding: 12px; border: 1px solid var(--color-border); width: 100%;" required>
+            <input type="email" placeholder="Email Address" style="padding: 12px; border: 1px solid var(--color-border); width: 100%;" required>
+            <select style="padding: 12px; border: 1px solid var(--color-border); width: 100%;" required>
+              <option value="">Select Service</option>
+              <option value="haircut">Signature Haircut</option>
+              <option value="styling">Premium Styling</option>
+              <option value="color">Full Color</option>
+              <option value="wedding">Bridal Styling</option>
+            </select>
+            <button type="submit" class="hero__cta" style="background: var(--color-black); color: var(--color-white); width: 100%; border: none;">Request Booking</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================
        FOOTER
        ================================================================ -->
   <footer style="padding: 32px 0; text-align: center; border-top: 1px solid rgba(0,0,0,0.06);">
@@ -288,7 +334,6 @@
 
   <!-- Scripts -->
   <script src="js/navbar.js"></script>
-  <script src="js/hero.js"></script>
   <script src="js/clients.js"></script>
 
 </body>

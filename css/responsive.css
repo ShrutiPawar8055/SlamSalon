@@ -5,16 +5,16 @@
 /* --- Tablet (≤ 1024px) --- */
 @media (max-width: 1024px) {
   .showcase__grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: var(--space-lg);
   }
 
   .hero__item {
-    width: 50vw;
+    width: 25vw;
   }
 
   .clients__card {
-    width: 260px;
+    width: 130px;
   }
 }
 
@@ -51,7 +51,7 @@
   }
 
   .hero__item {
-    width: 65vw;
+    width: 32.5vw;
   }
 
   /* Showcase */
@@ -60,7 +60,7 @@
   }
 
   .showcase__grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
     gap: var(--space-md);
   }
 
@@ -70,7 +70,7 @@
   }
 
   .clients__card {
-    width: 240px;
+    width: 120px;
   }
 
   /* Modal */
@@ -101,7 +101,7 @@
 
   /* Hero */
   .hero__item {
-    width: 80vw;
+    width: 40vw;
   }
 
   .hero__cta {
@@ -117,7 +117,7 @@
 
   /* Clients */
   .clients__card {
-    width: 220px;
+    width: 110px;
   }
 
   /* Modal */

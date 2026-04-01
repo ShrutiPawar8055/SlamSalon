@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Slam Salon — Premium hairstyling studio. Explore our signature cuts, transformations, and book your appointment today.">
+  <meta name="keywords" content="hairstylist, salon, haircuts, hair transformation, premium salon, book appointment">
+  <meta name="author" content="Slam Salon">
+  <title>Slam Salon — Premium Hairstyling Studio</title>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/hero.css">
+  <link rel="stylesheet" href="css/clients.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- ================================================================
+       NAVBAR
+       ================================================================ -->
+  <header class="navbar" id="navbar">
+    <nav class="navbar__inner">
+
+      <!-- Left Links -->
+      <div class="navbar__left">
+        <a href="#" class="navbar__link" id="nav-home">Home</a>
+        <a href="#clients" class="navbar__link" id="nav-hairstyles">Hairstyles</a>
+      </div>
+
+      <!-- Center Brand -->
+      <div class="navbar__center">
+        <!-- Logo image can be added here later -->
+        <a href="#" class="navbar__brand" id="nav-brand">Slam Salon</a>
+      </div>
+
+      <!-- Right Links -->
+      <div class="navbar__right">
+        <a href="#contact" class="navbar__link" id="nav-contact">Contact</a>
+        <a href="#book" class="navbar__cta" id="nav-book">Book Now</a>
+      </div>
+
+      <!-- Hamburger (mobile) -->
+      <button class="navbar__hamburger" id="navbar-hamburger" aria-label="Open menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+    </nav>
+  </header>
+
+  <!-- Mobile Menu Overlay -->
+  <div class="navbar__mobile-menu" id="navbar-mobile-menu">
+    <a href="#" class="navbar__link">Home</a>
+    <a href="#clients" class="navbar__link">Hairstyles</a>
+    <a href="#contact" class="navbar__link">Contact</a>
+    <a href="#book" class="navbar__cta">Book Now</a>
+  </div>
+
+  <!-- ================================================================
+       HERO MARQUEE
+       ================================================================ -->
+  <section class="hero" id="hero">
+    <div class="hero__marquee">
+      <div class="hero__track">
+        <!-- Set 1 -->
+        <div class="hero__item">
+          <img src="assets/images/Slideshow_img1.webp" alt="Signature hairstyle" class="hero__media" loading="eager">
+          <div class="hero__item-caption"><span>Hair that defines you.</span></div>
+        </div>
+        <div class="hero__item">
+          <img src="assets/images/Slideshow_img2.jpg" alt="Premium styling" class="hero__media" loading="eager">
+          <div class="hero__item-caption"><span>Style beyond trends.</span></div>
+        </div>
+        <div class="hero__item">
+          <img src="assets/images/Slideshow_img3.webp" alt="Elegant hairstyle" class="hero__media" loading="eager">
+          <div class="hero__item-caption"><span>Beauty in every strand.</span></div>
+        </div>
+        <div class="hero__item">
+          <img src="assets/images/Slideshow_img1.webp" alt="Flawless finish" class="hero__media" loading="lazy">
+          <div class="hero__item-caption"><span>Simply flawless.</span></div>
+        </div>
+        <!-- Duplicate for seamless loop -->
+        <div class="hero__item">
+          <img src="assets/images/Slideshow_img1.webp" alt="Signature hairstyle" class="hero__media" loading="lazy">
+          <div class="hero__item-caption"><span>Hair that defines you.</span></div>
+        </div>
+        <div class="hero__item">
+          <img src="assets/images/Slideshow_img2.jpg" alt="Premium styling" class="hero__media" loading="lazy">
+          <div class="hero__item-caption"><span>Style beyond trends.</span></div>
+        </div>
+        <div class="hero__item">
+          <img src="assets/images/Slideshow_img3.webp" alt="Elegant hairstyle" class="hero__media" loading="lazy">
+          <div class="hero__item-caption"><span>Beauty in every strand.</span></div>
+        </div>
+        <div class="hero__item">
+          <img src="assets/images/Slideshow_img1.webp" alt="Flawless finish" class="hero__media" loading="lazy">
+          <div class="hero__item-caption"><span>Simply flawless.</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Overlay Content -->
+    <div class="hero__overlay">
+      <p class="hero__subtitle">Premium Hairstyling Studio</p>
+      <h1 class="hero__title">Slam Salon</h1>
+      <a href="#book" class="hero__cta" id="hero-book-cta">Book Now</a>
+    </div>
+  </section>
+
+  <!-- ================================================================
+       SECTION 1 — FASHION & WEDDING SHOWCASE
+       ================================================================ -->
+  <section class="showcase" id="showcase">
+    <div class="container">
+
+      <div class="showcase__header">
+        <p class="showcase__label">Our Craft</p>
+        <h2 class="showcase__title">Where Every Strand Tells a Story</h2>
+        <p class="showcase__subtitle">Hair is not just style, it's identity.</p>
+      </div>
+
+      <div class="showcase__grid">
+
+        <!-- Fashion Video 1 -->
+        <div class="showcase__card" id="showcase-1">
+          <div class="showcase__card-media">
+            <video src="assets/videos/Fashion1.mp4" autoplay muted loop playsinline preload="metadata" class="showcase__video"></video>
+            <button class="unmute-btn" aria-label="Unmute">Unmute</button>
+          </div>
+          <div class="showcase__card-info">
+            <span class="showcase__card-title">Crafting Confidence</span>
+            <span class="showcase__card-quote">"Elegance begins with the perfect cut."</span>
+          </div>
+        </div>
+
+        <!-- Fashion Video 2 -->
+        <div class="showcase__card" id="showcase-2">
+          <div class="showcase__card-media">
+            <video src="assets/videos/Fashion2.mp4" autoplay muted loop playsinline preload="metadata" class="showcase__video"></video>
+            <button class="unmute-btn" aria-label="Unmute">Unmute</button>
+          </div>
+          <div class="showcase__card-info">
+            <span class="showcase__card-title">Style Redefined</span>
+            <span class="showcase__card-quote">"Your hair, redefined."</span>
+          </div>
+        </div>
+
+        <!-- Fashion Video 3 -->
+        <div class="showcase__card" id="showcase-3">
+          <div class="showcase__card-media">
+            <video src="assets/videos/Fashion3.mp4" autoplay muted loop playsinline preload="metadata" class="showcase__video"></video>
+            <button class="unmute-btn" aria-label="Unmute">Unmute</button>
+          </div>
+          <div class="showcase__card-info">
+            <span class="showcase__card-title">Designed for You</span>
+            <span class="showcase__card-quote">"Crafting confidence, one hairstyle at a time."</span>
+          </div>
+        </div>
+
+        <!-- Wedding Video -->
+        <div class="showcase__card showcase__card--wedding" id="showcase-4">
+          <div class="showcase__card-media">
+            <video src="assets/videos/Wedding.mp4" autoplay muted loop playsinline preload="metadata" class="showcase__video"></video>
+            <button class="unmute-btn" aria-label="Unmute">Unmute</button>
+          </div>
+          <div class="showcase__card-info">
+            <span class="showcase__card-title">Bridal Beauty</span>
+            <span class="showcase__card-quote">"Beauty in every strand."</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================
+       SECTION 2 — HAPPY CLIENTS (Marquee)
+       ================================================================ -->
+  <section class="clients" id="clients">
+    <div class="container">
+      <div class="clients__header">
+        <p class="clients__label">Real Results</p>
+        <h2 class="clients__title">Happy Clients</h2>
+        <p class="clients__subtitle">See the magic — real clients, real styles, real confidence.</p>
+      </div>
+    </div>
+
+    <div class="clients__marquee">
+      <div class="clients__track">
+        <!-- Set 1 -->
+        <div class="clients__card">
+          <div class="clients__card-media">
+            <video src="assets/videos/LayerCut1.mp4" autoplay muted loop playsinline preload="metadata" class="clients__video"></video>
+            <button class="unmute-btn" aria-label="Unmute">Unmute</button>
+          </div>
+          <div class="clients__card-info">
+            <span class="clients__card-name">Layer Cut</span>
+            <span class="clients__card-quote">"Hair that defines you."</span>
+          </div>
+        </div>
+
+        <div class="clients__card">
+          <div class="clients__card-media">
+            <video src="assets/videos/Graduated Bob Haircut.mp4" autoplay muted loop playsinline preload="metadata" class="clients__video"></video>
+            <button class="unmute-btn" aria-label="Unmute">Unmute</button>
+          </div>
+          <div class="clients__card-info">
+            <span class="clients__card-name">Graduated Bob</span>
+            <span class="clients__card-quote">"Elegance begins with the perfect cut."</span>
+          </div>
+        </div>
+
+        <div class="clients__card">
+          <div class="clients__card-media">
+            <video src="assets/videos/TexturedFringe.mp4" autoplay muted loop playsinline preload="metadata" class="clients__video"></video>
+            <button class="unmute-btn" aria-label="Unmute">Unmute</button>
+          </div>
+          <div class="clients__card-info">
+            <span class="clients__card-name">Textured Fringe</span>
+            <span class="clients__card-quote">"Style beyond trends."</span>
+          </div>
+        </div>
+
+        <!-- Duplicate for seamless loop -->
+        <div class="clients__card">
+          <div class="clients__card-media">
+            <video src="assets/videos/LayerCut1.mp4" autoplay muted loop playsinline preload="metadata" class="clients__video"></video>
+            <button class="unmute-btn" aria-label="Unmute">Unmute</button>
+          </div>
+          <div class="clients__card-info">
+            <span class="clients__card-name">Layer Cut</span>
+            <span class="clients__card-quote">"Hair that defines you."</span>
+          </div>
+        </div>
+
+        <div class="clients__card">
+          <div class="clients__card-media">
+            <video src="assets/videos/Graduated Bob Haircut.mp4" autoplay muted loop playsinline preload="metadata" class="clients__video"></video>
+            <button class="unmute-btn" aria-label="Unmute">Unmute</button>
+          </div>
+          <div class="clients__card-info">
+            <span class="clients__card-name">Graduated Bob</span>
+            <span class="clients__card-quote">"Elegance begins with the perfect cut."</span>
+          </div>
+        </div>
+
+        <div class="clients__card">
+          <div class="clients__card-media">
+            <video src="assets/videos/TexturedFringe.mp4" autoplay muted loop playsinline preload="metadata" class="clients__video"></video>
+            <button class="unmute-btn" aria-label="Unmute">Unmute</button>
+          </div>
+          <div class="clients__card-info">
+            <span class="clients__card-name">Textured Fringe</span>
+            <span class="clients__card-quote">"Style beyond trends."</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================
+       VIDEO MODAL
+       ================================================================ -->
+  <div class="modal" id="video-modal">
+    <div class="modal__backdrop"></div>
+    <div class="modal__content">
+      <div class="modal__placeholder">
+        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="8,5 19,12 8,19"></polygon></svg>
+        <span>Video Preview</span>
+      </div>
+      <button class="modal__close" id="modal-close" aria-label="Close modal">
+        <svg viewBox="0 0 24 24" fill="none"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- ================================================================
+       FOOTER
+       ================================================================ -->
+  <footer style="padding: 32px 0; text-align: center; border-top: 1px solid rgba(0,0,0,0.06);">
+    <p style="font-family: var(--font-body); font-size: 14px; color: var(--color-text-light); letter-spacing: 0.5px;">
+      &copy; 2026 Slam Salon. All rights reserved.
+    </p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/navbar.js"></script>
+  <script src="js/hero.js"></script>
+  <script src="js/clients.js"></script>
+
+</body>
+</html>

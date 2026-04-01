@@ -1,0 +1,333 @@
+/* ==========================================================================
+   SLAM SALON — Showcase & Client Sections
+   ========================================================================== */
+
+/* ==========================================================================
+   SECTION 1 — Showcase (Fashion + Wedding Videos Grid)
+   ========================================================================== */
+
+.showcase {
+  padding: var(--space-3xl) 0 var(--space-2xl);
+  background: var(--color-bg);
+}
+
+.showcase__header {
+  text-align: center;
+  margin-bottom: var(--space-xl);
+}
+
+.showcase__label {
+  font-family: var(--font-heading);
+  font-weight: var(--fw-medium);
+  font-size: 13px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--color-text-light);
+  margin-bottom: var(--space-sm);
+}
+
+.showcase__title {
+  font-family: var(--font-heading);
+  font-weight: var(--fw-bold);
+  margin-bottom: var(--space-sm);
+}
+
+.showcase__subtitle {
+  font-family: var(--font-body);
+  color: var(--color-text-light);
+  font-size: 16px;
+  font-style: italic;
+}
+
+/* --- Showcase Grid: 2×2 on desktop --- */
+.showcase__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-lg);
+}
+
+/* --- Showcase Card --- */
+.showcase__card {
+  position: relative;
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  cursor: pointer;
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.showcase__card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.showcase__card-media {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 9 / 16;
+  overflow: hidden;
+  background: #0a0a0a;
+}
+
+.showcase__video {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform var(--transition-slow);
+}
+
+.showcase__card:hover .showcase__video {
+  transform: scale(1.02);
+}
+
+.showcase__card-info {
+  padding: var(--space-md) var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.showcase__card-title {
+  font-family: var(--font-heading);
+  font-weight: var(--fw-medium);
+  font-size: 16px;
+  color: var(--color-text);
+  letter-spacing: 0.3px;
+}
+
+.showcase__card-quote {
+  font-family: var(--font-body);
+  font-size: 14px;
+  color: var(--color-text-light);
+  font-style: italic;
+}
+
+/* --- Unmute Button (shared across all video sections) --- */
+.unmute-btn {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  z-index: 10;
+  font-family: var(--font-heading);
+  font-weight: var(--fw-medium);
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--color-white);
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 6px 14px;
+  cursor: pointer;
+  transition: background var(--transition-fast);
+}
+
+.unmute-btn:hover {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+
+/* ==========================================================================
+   SECTION 2 — Happy Clients (Marquee)
+   ========================================================================== */
+
+.clients {
+  padding: var(--space-2xl) 0 var(--space-xl);
+  background: #fafafa;
+  overflow: hidden;
+}
+
+.clients__header {
+  text-align: center;
+  margin-bottom: var(--space-xl);
+}
+
+.clients__label {
+  font-family: var(--font-heading);
+  font-weight: var(--fw-medium);
+  font-size: 13px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--color-text-light);
+  margin-bottom: var(--space-sm);
+}
+
+.clients__title {
+  font-family: var(--font-heading);
+  font-weight: var(--fw-bold);
+  margin-bottom: var(--space-sm);
+}
+
+.clients__subtitle {
+  font-family: var(--font-body);
+  color: var(--color-text-light);
+  font-size: 16px;
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+/* --- Clients Marquee --- */
+.clients__marquee {
+  width: 100%;
+  overflow: hidden;
+}
+
+.clients__track {
+  display: flex;
+  gap: var(--space-lg);
+  animation: clients-scroll 25s linear infinite;
+  width: max-content;
+}
+
+.clients__track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes clients-scroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* --- Client Video Card --- */
+.clients__card {
+  flex-shrink: 0;
+  width: 300px;
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow var(--transition-base);
+}
+
+.clients__card:hover {
+  box-shadow: var(--shadow-lg);
+}
+
+.clients__card-media {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 9 / 16;
+  overflow: hidden;
+  background: #0a0a0a;
+}
+
+.clients__video {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.clients__card-info {
+  padding: var(--space-md);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.clients__card-name {
+  font-family: var(--font-heading);
+  font-weight: var(--fw-medium);
+  font-size: 15px;
+  color: var(--color-text);
+}
+
+.clients__card-quote {
+  font-family: var(--font-body);
+  font-size: 13px;
+  color: var(--color-text-light);
+  font-style: italic;
+}
+
+
+/* ==========================================================================
+   Video Modal (shared)
+   ========================================================================== */
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2000;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal.open {
+  display: flex;
+}
+
+.modal__backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(6px);
+}
+
+.modal__content {
+  position: relative;
+  z-index: 2001;
+  width: 90%;
+  max-width: 720px;
+  aspect-ratio: 9 / 16;
+  max-height: 85vh;
+  background: var(--color-black);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal__video {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.modal__placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-md);
+  color: rgba(255, 255, 255, 0.4);
+  font-family: var(--font-heading);
+  font-weight: var(--fw-medium);
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.modal__close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  z-index: 2002;
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background var(--transition-fast);
+}
+
+.modal__close:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.modal__close svg {
+  width: 18px;
+  height: 18px;
+  stroke: var(--color-white);
+  stroke-width: 2;
+}

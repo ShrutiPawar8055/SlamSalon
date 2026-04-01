@@ -1,0 +1,141 @@
+/* ==========================================================================
+   SLAM SALON — Hero Marquee
+   ========================================================================== */
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background: #0a0a0a;
+  margin-top: var(--navbar-height);
+}
+
+/* --- Marquee Container --- */
+.hero__marquee {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.hero__track {
+  display: flex;
+  height: 100%;
+  animation: hero-scroll 30s linear infinite;
+  /* 4 items per set × 2 sets = 8 total items. We scroll 50% to loop set 1. */
+  width: max-content;
+}
+
+.hero__track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes hero-scroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* --- Each Image Item --- */
+.hero__item {
+  position: relative;
+  height: 100%;
+  flex-shrink: 0;
+  /* Each item takes up a comfortable width on desktop */
+  width: 40vw;
+  min-width: 320px;
+}
+
+.hero__media {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  display: block;
+}
+
+/* --- Per-item Caption --- */
+.hero__item-caption {
+  position: absolute;
+  bottom: 24px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  z-index: 4;
+  pointer-events: none;
+}
+
+.hero__item-caption span {
+  font-family: var(--font-body);
+  font-weight: var(--fw-regular);
+  font-size: 13px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.55);
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.4);
+}
+
+/* --- Overlay (Brand + CTA, stays centered) --- */
+.hero__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.2) 0%,
+    rgba(0, 0, 0, 0.05) 35%,
+    rgba(0, 0, 0, 0.05) 65%,
+    rgba(0, 0, 0, 0.45) 100%
+  );
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-lg);
+  pointer-events: none;
+}
+
+.hero__title {
+  font-family: var(--font-heading);
+  font-weight: var(--fw-bold);
+  font-size: clamp(2.5rem, 7vw, 5rem);
+  letter-spacing: 8px;
+  text-transform: uppercase;
+  color: var(--color-white);
+  text-align: center;
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+}
+
+.hero__subtitle {
+  font-family: var(--font-body);
+  font-weight: var(--fw-regular);
+  font-size: clamp(0.9rem, 2vw, 1.15rem);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.75);
+  text-align: center;
+}
+
+.hero__cta {
+  pointer-events: all;
+  font-family: var(--font-heading);
+  font-weight: var(--fw-medium);
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--color-white);
+  background: transparent;
+  border: 1.5px solid rgba(255, 255, 255, 0.7);
+  padding: 14px 40px;
+  transition: background var(--transition-fast), border-color var(--transition-fast), transform var(--transition-fast);
+  cursor: pointer;
+}
+
+.hero__cta:hover {
+  background: var(--color-white);
+  color: var(--color-black);
+  border-color: var(--color-white);
+  transform: translateY(-2px);
+}

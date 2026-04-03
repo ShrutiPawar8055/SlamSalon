@@ -38,61 +38,70 @@
   var modalClose = document.getElementById('modal-close');
   var modalVideo = modal ? modal.querySelector('.modal__video') : null;
 
-  if (!modal) return;
+  if (modal) {
+    // Open modal when clicking a card
+    document.querySelectorAll('.showcase__card, .clients__card').forEach(function (card) {
+      card.addEventListener('click', function () {
+        var video = card.querySelector('video');
+        if (video && modalVideo) {
+          modalVideo.src = video.src;
+          modal.classList.add('open');
+          modalVideo.play();
+          document.body.style.overflow = 'hidden';
+        }
+      });
+    });
 
-  // Open modal when clicking a card
-  document.querySelectorAll('.showcase__card, .clients__card').forEach(function (card) {
-    card.addEventListener('click', function () {
-      var video = card.querySelector('video');
-      if (video && modalVideo) {
-        modalVideo.src = video.src;
-        modal.classList.add('open');
-        modalVideo.play();
-        document.body.style.overflow = 'hidden';
+    function closeModal() {
+      modal.classList.remove('open');
+      if (modalVideo) {
+        modalVideo.pause();
+        modalVideo.src = "";
+      }
+      document.body.style.overflow = '';
+    }
+
+    if (modalClose) {
+      modalClose.addEventListener('click', closeModal);
+    }
+
+    var backdrop = modal.querySelector('.modal__backdrop');
+    if (backdrop) {
+      backdrop.addEventListener('click', closeModal);
+    }
+
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && modal.classList.contains('open')) {
+        closeModal();
       }
     });
-  });
-
-  function closeModal() {
-    modal.classList.remove('open');
-    if (modalVideo) {
-      modalVideo.pause();
-      modalVideo.src = "";
-    }
-    document.body.style.overflow = '';
   }
-
-  if (modalClose) {
-    modalClose.addEventListener('click', closeModal);
-  }
-
-  var backdrop = modal.querySelector('.modal__backdrop');
-  if (backdrop) {
-    backdrop.addEventListener('click', closeModal);
-  }
-
-  document.addEventListener('keydown', function (e) {
-    if (e.key === 'Escape' && modal.classList.contains('open')) {
-      closeModal();
-    }
-  });
 
   // --- Scroll Reveal Animation ---
-  const revealElements = document.querySelectorAll('.showcase__card, .clients__card, .showcase__header, .contact__grid');
-  
   const revealOnScroll = () => {
+    const revealElements = document.querySelectorAll('.reveal:not(.active)');
     const windowHeight = window.innerHeight;
+    
     revealElements.forEach(el => {
       const elementTop = el.getBoundingClientRect().top;
-      const elementVisible = 150;
+      const elementVisible = 80; // Trigger slightly earlier
+      
       if (elementTop < windowHeight - elementVisible) {
-        el.classList.add('reveal', 'active');
+        el.classList.add('active');
       }
     });
   };
 
-  window.addEventListener('scroll', revealOnScroll);
-  revealOnScroll(); // Run once on load
+  // Run on load, scroll, and resize
+  window.addEventListener('scroll', revealOnScroll, { passive: true });
+  window.addEventListener('resize', revealOnScroll, { passive: true });
+  
+  // Initial run after a small delay to ensure layout is ready
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', revealOnScroll);
+  } else {
+    setTimeout(revealOnScroll, 100);
+  }
 
   // --- Booking Form Handling ---
   const bookingForm = document.getElementById('booking-form');

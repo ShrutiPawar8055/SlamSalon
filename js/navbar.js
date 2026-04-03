@@ -37,14 +37,35 @@
     });
   }
 
-  // --- Scroll shadow enhancement ---
+  // --- Scroll shadow enhancement & Active link highlighting ---
   if (navbar) {
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.navbar__link');
+
     window.addEventListener('scroll', function () {
+      // Shadow
       if (window.scrollY > 10) {
         navbar.classList.add('scrolled');
       } else {
         navbar.classList.remove('scrolled');
       }
+
+      // Active highlighting
+      let current = '';
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        if (window.scrollY >= (sectionTop - 100)) {
+          current = section.getAttribute('id');
+        }
+      });
+
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href').slice(1) === current) {
+          link.classList.add('active');
+        }
+      });
     }, { passive: true });
   }
 })();

@@ -102,6 +102,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: var(--navbar-height);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -206,6 +207,20 @@ section:not(:last-of-type) {
   background: transparent;
   color: var(--color-black);
   transform: translateY(-2px);
+}
+
+/* --- Footer --- */
+.footer {
+  padding: var(--space-lg) 0;
+  text-align: center;
+  border-top: 1px solid var(--color-border);
+}
+
+.footer__text {
+  font-family: var(--font-body);
+  font-size: 14px;
+  color: var(--color-text-light);
+  letter-spacing: 0.5px;
 }
 
 /* --- Smooth Scrollbar for Chrome/Safari --- */

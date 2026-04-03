@@ -5,9 +5,9 @@
 (function () {
   'use strict';
 
-  // =======================================================================
+  
   // UNMUTE / MUTE TOGGLE — works for all .unmute-btn elements
-  // =======================================================================
+
   document.querySelectorAll('.unmute-btn').forEach(function (btn) {
     btn.addEventListener('click', function (e) {
       e.stopPropagation();
@@ -31,9 +31,9 @@
     });
   });
 
-  // =======================================================================
+
   // VIDEO MODAL
-  // =======================================================================
+ 
   var modal = document.getElementById('video-modal');
   var modalClose = document.getElementById('modal-close');
 

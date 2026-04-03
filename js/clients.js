@@ -36,11 +36,29 @@
  
   var modal = document.getElementById('video-modal');
   var modalClose = document.getElementById('modal-close');
+  var modalVideo = modal ? modal.querySelector('.modal__video') : null;
 
   if (!modal) return;
 
+  // Open modal when clicking a card
+  document.querySelectorAll('.showcase__card, .clients__card').forEach(function (card) {
+    card.addEventListener('click', function () {
+      var video = card.querySelector('video');
+      if (video && modalVideo) {
+        modalVideo.src = video.src;
+        modal.classList.add('open');
+        modalVideo.play();
+        document.body.style.overflow = 'hidden';
+      }
+    });
+  });
+
   function closeModal() {
     modal.classList.remove('open');
+    if (modalVideo) {
+      modalVideo.pause();
+      modalVideo.src = "";
+    }
     document.body.style.overflow = '';
   }
 
@@ -58,4 +76,53 @@
       closeModal();
     }
   });
+
+  // --- Scroll Reveal Animation ---
+  const revealElements = document.querySelectorAll('.showcase__card, .clients__card, .showcase__header, .contact__grid');
+  
+  const revealOnScroll = () => {
+    const windowHeight = window.innerHeight;
+    revealElements.forEach(el => {
+      const elementTop = el.getBoundingClientRect().top;
+      const elementVisible = 150;
+      if (elementTop < windowHeight - elementVisible) {
+        el.classList.add('reveal', 'active');
+      }
+    });
+  };
+
+  window.addEventListener('scroll', revealOnScroll);
+  revealOnScroll(); // Run once on load
+
+  // --- Booking Form Handling ---
+  const bookingForm = document.getElementById('booking-form');
+  const successMsg = document.getElementById('form-success');
+
+  if (bookingForm) {
+    bookingForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      const submitBtn = bookingForm.querySelector('button[type="submit"]');
+      
+      // Visual feedback
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Sending...';
+      }
+
+      // Simulate API call
+      setTimeout(() => {
+        bookingForm.reset();
+        if (successMsg) successMsg.style.display = 'block';
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.textContent = 'Request Booking';
+        }
+        
+        // Hide success message after 5s
+        setTimeout(() => {
+          if (successMsg) successMsg.style.display = 'none';
+        }, 5000);
+      }, 1500);
+    });
+  }
 })();

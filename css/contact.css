@@ -1,0 +1,117 @@
+/* ==========================================================================
+   SLAM SALON — Contact & Booking Section
+   ========================================================================== */
+
+.contact__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--space-2xl);
+  margin-top: var(--space-xl);
+}
+
+.contact__subtitle {
+  font-family: var(--font-heading);
+  font-weight: var(--fw-bold);
+  font-size: 20px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: var(--space-lg);
+  color: var(--color-text);
+}
+
+.contact__text {
+  margin-bottom: var(--space-sm);
+  color: var(--color-text-light);
+  font-size: 16px;
+}
+
+.contact__hours {
+  margin-top: var(--space-lg);
+  padding-top: var(--space-md);
+  border-top: 1px solid var(--color-border);
+}
+
+.contact__hours-label {
+  font-family: var(--font-heading);
+  font-weight: var(--fw-medium);
+  margin-bottom: var(--space-xs);
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.contact__hours-text {
+  font-size: 14px;
+  color: var(--color-text-light);
+  margin-bottom: 4px;
+}
+
+/* --- Form Styles --- */
+.contact__form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.contact__input,
+.contact__select {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid var(--color-border);
+  background: var(--color-white);
+  font-family: var(--font-body);
+  font-size: 15px;
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+  outline: none;
+}
+
+.contact__input:focus,
+.contact__select:focus {
+  border-color: var(--color-black);
+  box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.03);
+}
+
+.contact__button {
+  width: 100%;
+  padding: 16px;
+  background: var(--color-black);
+  color: var(--color-white);
+  font-family: var(--font-heading);
+  font-weight: var(--fw-medium);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 14px;
+  transition: background var(--transition-fast), transform var(--transition-fast);
+  margin-top: var(--space-sm);
+}
+
+.contact__button:hover {
+  background: #222;
+  transform: translateY(-2px);
+}
+
+.contact__button:active {
+  transform: translateY(0);
+}
+
+.contact__success-msg {
+  margin-top: var(--space-md);
+  padding: 12px;
+  background: #f0fdf4;
+  color: #166534;
+  border: 1px solid #bbf7d0;
+  font-size: 14px;
+  text-align: center;
+}
+
+/* --- Animation for reveal --- */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s var(--ease-out), transform 0.8s var(--ease-out);
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}

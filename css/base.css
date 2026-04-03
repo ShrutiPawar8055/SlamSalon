@@ -170,14 +170,58 @@ section {
   color: var(--color-white);
 }
 
-/* --- Scrollbar (Webkit) --- */
+/* --- Scroll Reveal --- */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s var(--ease-out), transform 0.8s var(--ease-out);
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* --- Section Dividers --- */
+section:not(:last-of-type) {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.03);
+}
+
+/* --- Global Button Styles --- */
+.btn-primary {
+  display: inline-block;
+  padding: 14px 32px;
+  background: var(--color-black);
+  color: var(--color-white);
+  font-family: var(--font-heading);
+  font-weight: var(--fw-medium);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 14px;
+  transition: all var(--transition-base);
+  border: 1px solid var(--color-black);
+}
+
+.btn-primary:hover {
+  background: transparent;
+  color: var(--color-black);
+  transform: translateY(-2px);
+}
+
+/* --- Smooth Scrollbar for Chrome/Safari --- */
 ::-webkit-scrollbar {
-  width: 6px;
+  width: 8px;
 }
+
 ::-webkit-scrollbar-track {
-  background: var(--color-bg);
+  background: #f1f1f1;
 }
+
 ::-webkit-scrollbar-thumb {
-  background: rgba(0, 0, 0, 0.2);
-  border-radius: var(--radius-full);
+  background: #888;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }

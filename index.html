@@ -16,7 +16,8 @@
   <link rel="stylesheet" href="css/contact.css">
   <link rel="stylesheet" href="css/responsive.css">
 </head>
-<body>
+<body class="no-js">
+  <script>document.body.classList.remove('no-js');</script>
 
   <!-- ================================================================
        NAVBAR
@@ -26,7 +27,8 @@
 
       <!-- Left Links -->
       <div class="navbar__left">
-        <a href="#" class="navbar__link" id="nav-home">Home</a>
+        <a href="index.html" class="navbar__link" id="nav-home">Home</a>
+        <a href="meet-the-team.html" class="navbar__link" id="nav-team">Meet the Team</a>
         <a href="#clients" class="navbar__link" id="nav-hairstyles">Hairstyles</a>
       </div>
 
@@ -54,7 +56,8 @@
 
   <!-- Mobile Menu Overlay -->
   <div class="navbar__mobile-menu" id="navbar-mobile-menu">
-    <a href="#" class="navbar__link">Home</a>
+    <a href="index.html" class="navbar__link">Home</a>
+    <a href="meet-the-team.html" class="navbar__link">Meet the Team</a>
     <a href="#clients" class="navbar__link">Hairstyles</a>
     <a href="#contact" class="navbar__link">Contact</a>
     <a href="#book" class="navbar__cta">Book Now</a>
@@ -85,19 +88,19 @@
         </div>
         <!-- Duplicate for seamless loop -->
         <div class="hero__item">
-          <img src="assets/Images/Slideshow_img1.webp" alt="Signature hairstyle" class="hero__media" loading="lazy">
+          <img src="assets/Images/Slideshow_img2.jpg" alt="Signature hairstyle" class="hero__media" loading="lazy">
           <div class="hero__item-caption"><span>Hair that defines you.</span></div>
         </div>
         <div class="hero__item">
-          <img src="assets/Images/Slideshow_img2.jpg" alt="Premium styling" class="hero__media" loading="lazy">
+          <img src="assets/Images/Slideshow_img3.webp" alt="Premium styling" class="hero__media" loading="lazy">
           <div class="hero__item-caption"><span>Style beyond trends.</span></div>
         </div>
         <div class="hero__item">
-          <img src="assets/Images/Slideshow_img3.webp" alt="Elegant hairstyle" class="hero__media" loading="lazy">
+          <img src="assets/Images/Slideshow_img1.webp" alt="Elegant hairstyle" class="hero__media" loading="lazy">
           <div class="hero__item-caption"><span>Beauty in every strand.</span></div>
         </div>
         <div class="hero__item">
-          <img src="assets/Images/Slideshow_img1.webp" alt="Flawless finish" class="hero__media" loading="lazy">
+          <img src="assets/Images/Slideshow_img2.jpg" alt="Flawless finish" class="hero__media" loading="lazy">
           <div class="hero__item-caption"><span>Simply flawless.</span></div>
         </div>
       </div>
@@ -205,7 +208,7 @@
 
         <div class="clients__card reveal">
           <div class="clients__card-media">
-            <video src="assets/Videos/Graduated Bob Haircut.mp4" autoplay muted loop playsinline preload="metadata" class="clients__video"></video>
+            <video src="assets/Videos/Graduated_Bob_Haircut.mp4" autoplay muted loop playsinline preload="metadata" class="clients__video"></video>
             <button class="unmute-btn" aria-label="Unmute">Unmute</button>
           </div>
           <div class="clients__card-info">
@@ -239,7 +242,7 @@
 
         <div class="clients__card reveal">
           <div class="clients__card-media">
-            <video src="assets/Videos/Graduated Bob Haircut.mp4" autoplay muted loop playsinline preload="metadata" class="clients__video"></video>
+            <video src="assets/Videos/Graduated_Bob_Haircut.mp4" autoplay muted loop playsinline preload="metadata" class="clients__video"></video>
             <button class="unmute-btn" aria-label="Unmute">Unmute</button>
           </div>
           <div class="clients__card-info">
@@ -275,6 +278,28 @@
     </div>
   </div>
 
+
+
+   <!-- ================================================================
+       MEET THE TEAM MARQUEE
+       ================================================================ -->
+        <a href="meet-the-team.html" class="team-marquee">
+          <div class="team-marquee__track">
+            <span>Meet the Team</span>
+            <span>Meet the Team</span>
+            <span>Meet the Team</span>
+            <span>Meet the Team</span>
+            <span>Meet the Team</span>
+            <!-- Duplicate for loop -->
+            <span>Meet the Team</span>
+            <span>Meet the Team</span>
+            <span>Meet the Team</span>
+            <span>Meet the Team</span>
+            <span>Meet the Team</span>
+          </div>
+        </a>
+
+
   <!-- ================================================================
        SECTION 3 — CONTACT & BOOKING
        ================================================================ -->
@@ -301,6 +326,7 @@
             <p class="contact__hours-text">Sun: Closed</p>
           </div>
         </div>
+        
 
         <!-- Booking Form -->
         <div class="contact__form-container">
@@ -323,13 +349,21 @@
     </div>
   </section>
 
+ 
   <!-- ================================================================
        FOOTER
        ================================================================ -->
   <footer class="footer">
-    <p class="footer__text">
-      &copy; 2026 Slam Salon. All rights reserved.
-    </p>
+    <div class="container footer__inner">
+      <div class="footer__left">
+        <a href="https://www.instagram.com/slamsalon" target="_blank" rel="noopener noreferrer" class="footer__social-link" aria-label="Instagram">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+        </a>
+      </div>
+      <p class="footer__text">
+        &copy; 2026 Slam Salon. All rights reserved.
+      </p>
+    </div>
   </footer>
 
   <!-- Scripts -->

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Slam Salon — Meet our professional team of expert hairstylists.">
+  <meta name="keywords" content="hairstylist, team, salon, haircuts, premium salon">
+  <meta name="author" content="Slam Salon">
+  <title>Meet the Team — Slam Salon</title>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/hero.css">
+  <link rel="stylesheet" href="css/clients.css">
+  <link rel="stylesheet" href="css/contact.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body class="no-js">
+  <script>document.body.classList.remove('no-js');</script>
+
+  <!-- ================================================================
+       NAVBAR
+       ================================================================ -->
+  <header class="navbar" id="navbar">
+    <nav class="navbar__inner">
+
+      <!-- Left Links -->
+      <div class="navbar__left">
+        <a href="index.html" class="navbar__link">Home</a>
+        <a href="meet-the-team.html" class="navbar__link active">Meet the Team</a>
+        <a href="index.html#clients" class="navbar__link">Hairstyles</a>
+      </div>
+
+      <!-- Center Brand -->
+      <div class="navbar__center">
+        <a href="index.html" class="navbar__brand">Slam Salon</a>
+      </div>
+
+      <!-- Right Links -->
+      <div class="navbar__right">
+        <a href="index.html#contact" class="navbar__link">Contact</a>
+        <a href="index.html#book" class="navbar__cta">Book Now</a>
+      </div>
+
+      <!-- Hamburger (mobile) -->
+      <button class="navbar__hamburger" id="navbar-hamburger" aria-label="Open menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+    </nav>
+  </header>
+
+  <!-- Mobile Menu Overlay -->
+  <div class="navbar__mobile-menu" id="navbar-mobile-menu">
+    <a href="index.html" class="navbar__link">Home</a>
+    <a href="meet-the-team.html" class="navbar__link">Meet the Team</a>
+    <a href="index.html#clients" class="navbar__link">Hairstyles</a>
+    <a href="index.html#contact" class="navbar__link">Contact</a>
+    <a href="index.html#book" class="navbar__cta">Book Now</a>
+  </div>
+
+  <!-- ================================================================
+       TEAM HERO SECTION
+       ================================================================ -->
+  <!-- <section class="team-hero">
+    <div class="container">
+      <div class="showcase__header reveal">
+        <p class="showcase__label">Expert Hands</p>
+        <h2 class="showcase__title">Meet the Team</h2>
+        <p class="showcase__subtitle">The visionaries behind every transformation.</p>
+      </div>
+    </div>
+  </section> -->
+
+  <!-- ================================================================
+       TEAM VIDEO SHOWCASE
+       ================================================================ -->
+  <section class="team-showcase" style="padding-top: 0; padding-bottom: var(--space-2xl);">
+    <div class="container">
+      <div class="showcase__card reveal" style="max-width: 450px; margin: 0 auto;">
+        <div class="showcase__card-media" style="aspect-ratio: 9 / 16;">
+          <video src="assets/Videos/Meet_the_team_video.mp4" autoplay muted loop playsinline preload="metadata" class="showcase__video" style="object-fit: cover;"></video>
+          <button class="unmute-btn" aria-label="Unmute">Unmute</button>
+        </div>
+        <div class="showcase__card-info">
+          <span class="showcase__card-title">Crafting Excellence</span>
+          <span class="showcase__card-quote">"Our team combines years of experience with modern techniques to bring you the best styling experience."</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================
+       STYLE YOUR HAIR MARQUEE
+       ================================================================ -->
+  <a href="index.html#book" class="team-marquee">
+    <div class="team-marquee__track">
+      <span>Style your hair</span>
+      <span>Style your hair</span>
+      <span>Style your hair</span>
+      <span>Style your hair</span>
+      <span>Style your hair</span>
+      <!-- Duplicate for loop -->
+      <span>Style your hair</span>
+      <span>Style your hair</span>
+      <span>Style your hair</span>
+      <span>Style your hair</span>
+      <span>Style your hair</span>
+    </div>
+  </a>
+
+  <!-- ================================================================
+       FOOTER
+       ================================================================ -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__left">
+        <a href="https://www.instagram.com/slamsalon" target="_blank" rel="noopener noreferrer" class="footer__social-link" aria-label="Instagram">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+        </a>
+      </div>
+      <p class="footer__text">
+        &copy; 2026 Slam Salon. All rights reserved.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/navbar.js"></script>
+  <script src="js/clients.js"></script>
+
+</body>
+</html>

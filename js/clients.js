@@ -31,6 +31,25 @@
     });
   });
 
+  // PLAY / PAUSE TOGGLE — works for all cards
+  document.querySelectorAll('.showcase__card, .clients__card').forEach(function (card) {
+    card.addEventListener('click', function (e) {
+      // Don't trigger if unmute button was clicked
+      if (e.target.classList.contains('unmute-btn')) return;
+
+      var video = card.querySelector('video');
+      if (!video) return;
+
+      if (video.paused) {
+        video.play();
+        card.classList.remove('video-paused');
+      } else {
+        video.pause();
+        card.classList.add('video-paused');
+      }
+    });
+  });
+
 
   // VIDEO MODAL
  
@@ -39,7 +58,9 @@
   var modalVideo = modal ? modal.querySelector('.modal__video') : null;
 
   if (modal) {
-    // Open modal when clicking a card
+    // Modal opening is now disabled to allow in-card play/pause
+    // If you want to keep modal, you should add a dedicated 'expand' button
+    /*
     document.querySelectorAll('.showcase__card, .clients__card').forEach(function (card) {
       card.addEventListener('click', function () {
         var video = card.querySelector('video');
@@ -51,6 +72,7 @@
         }
       });
     });
+    */
 
     function closeModal() {
       modal.classList.remove('open');
@@ -96,11 +118,18 @@
   window.addEventListener('scroll', revealOnScroll, { passive: true });
   window.addEventListener('resize', revealOnScroll, { passive: true });
   
-  // Initial run after a small delay to ensure layout is ready
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', revealOnScroll);
-  } else {
+  // Initial run
+  const initReveal = () => {
+    revealOnScroll();
+    // Run again after a small delay for dynamic content
     setTimeout(revealOnScroll, 100);
+    setTimeout(revealOnScroll, 500);
+  };
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initReveal);
+  } else {
+    initReveal();
   }
 
   // --- Booking Form Handling ---

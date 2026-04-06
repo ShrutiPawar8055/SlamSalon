@@ -219,7 +219,11 @@
 
 @keyframes clients-scroll {
   0%   { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+  100% { transform: translateX(calc(-50% - (var(--space-lg) / 2))); }
+}
+
+.clients__track > * {
+  flex-shrink: 0;
 }
 
 /* --- Client Video Card (reduced size) --- */

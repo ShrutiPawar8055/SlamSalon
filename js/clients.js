@@ -5,6 +5,8 @@
 (function () {
   'use strict';
 
+  // Remove no-js class once the script starts running
+  document.body.classList.remove('no-js');
   
   // UNMUTE / MUTE TOGGLE — works for all .unmute-btn elements
 

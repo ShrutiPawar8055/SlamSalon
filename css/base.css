@@ -183,9 +183,12 @@ section {
   transform: translateY(0);
 }
 
-.no-js .reveal {
-  opacity: 1;
-  transform: translateY(0);
+/* Fallback: If JS is disabled OR if the reveal logic fails to trigger, 
+   we can use this class to force visibility */
+.no-js .reveal,
+.reveal-fallback .reveal {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
 }
 
 /* --- Section Dividers --- */
